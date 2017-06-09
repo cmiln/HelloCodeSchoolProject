@@ -17,6 +17,20 @@
 </ul>
 
 <Button>Add product</Button>
-
+<Modal
+  src="https://my-app.com/update-information"
+  open={this.state.open}
+  title="Edit account information"
+  primaryAction={{
+    content: 'Update account',
+    onAction: () => this.setState({open: false}),
+  }}
+  secondaryActions={[{
+    content: 'Change account',
+    onAction: () => this.setState({open: false}),
+  }]}
+  onClose={() => this.setState({open: false})}
+/>
+)
   </body>
 </html>
